@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ===========inicio do header================= */
+.header {
+  background-color: rgb(219, 116, 116);
+  padding: 20px;
+  height: 30vh;
+}
+
+.header h1 {
+  color: white;
+  width: 150px;
+  margin-bottom: 10px;
+}
+/* ===============fim do header=======*/
+.main {
+  background-color: rgb(223, 146, 146);
+  padding: 20px;
+  color: white;
+  line-height: 30px;
+  height: 65vh;
+}
+
+.main ul {
+  padding: 20px;
+  list-style: georgian;
+  height: 15vh;
+}
+
+/* =============inicio do footer========== */
+.footer {
+  background-color: rgb(219, 116, 116);
+  text-align: center;
+  padding: 20px 0;
+  /* height: 10vh; */
+}
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+/*================ fim do footer ============== */
+/* ================inicio do img================ */
+.img {
+  width: 450px;
+  height: 450px;
+}
+/* =================fim do img ================*/
