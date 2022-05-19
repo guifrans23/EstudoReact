@@ -1,4 +1,4 @@
-import logo from "../../img/logo1.png";
+import logo from "../../img/logo6.png";
 export default function Marca() {
   return (
     <div>

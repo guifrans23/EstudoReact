@@ -6,6 +6,14 @@ import Mensagem from "./Mensagem";
 export default function Container() {
   //vamos o estado inicial dos produtos,ou seja,
   // quais dados existem dentro do objetos produtos.
+  const [mensagem, setMensagem] = useState([
+    {
+      titulo: "",
+      autor: "",
+      mensagem: "",
+    },
+  ]);
+
   const [produtos, setProduto] = useState([
     {
       id: "",
@@ -28,10 +36,14 @@ export default function Container() {
       );
   }, []);
 
+  const mudarDados = (content) => {
+    setMensagem(content);
+  };
+
   return (
     <div className="Container">
-      <Mensagem />
-      <Conteudo dados={produtos} />
+      <Mensagem info={mensagem} />
+      <Conteudo dados={produtos} acao={mudarDados} />
     </div>
   );
 }

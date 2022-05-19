@@ -1,0 +1,40 @@
+sudo apt update
+sudo apt upgrade
+sudo apt install dirmngr gnupg apt-transport-https ca-certificates software-properties-common
+
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+
+wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
+
+sudo apt update 
+sudo apt install mongodb-org
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+Caso de erro de dependencia usar:
+echo "deb http://security.ubuntu.com/ubuntu impish-security main" | sudo tee /etc/apt/sources.list.d/impish-security.list
+sudo apt-get update
+sudo apt-get install libssl1.1
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+sudo systemctl enable mongod
+sudo systemctl start mongod
+sudo systemctl status mongod
+
+mongo --eval 'db.runCommand({connectionStatus: 1})'
+
+Criação de usuário, senha, banco de dados
+
+execute o comando mongo e escreva o código abaixo
+
+db.createUser(
+{	user: "usuario",
+	pwd: "senha",
+	roles:[{role: "userAdmin" , db:"nomedobanco"
+}]})
+
+
+
+
+
+
+
+
